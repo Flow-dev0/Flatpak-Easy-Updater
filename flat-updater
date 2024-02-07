@@ -1,0 +1,31 @@
+#!/bin/bash
+
+system_version=$(grep VERSION= /etc/os-release | grep -oe '\([0-9.]*\)')
+previous_version=$(grep '\([0-9.]*\)' /home/$USER/.config/.update-version)
+hold=0
+
+while [ $hold -ne 1 ]
+do
+try_update() {
+    if [ "$system_version" != "$previous_version" ]
+    then
+        flatpak update -y
+    fi
+}
+
+get_version() {
+    grep VERSION= /etc/os-release | grep -oe '\([0-9.]*\)' > /home/$USER/.config/.update-version
+}
+
+if [ -f /home/$USER/.config/.update-version ]
+then
+    get_version
+    try_update
+        if [ $? -eq 0 ]
+        then
+            hold=1
+        fi
+else
+    get_version  
+fi
+done
