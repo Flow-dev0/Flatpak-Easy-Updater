@@ -10,7 +10,7 @@ The Flatpak Easy Updater is designed for OpenSUSE Tumbleweed and works by utiliz
 
 ### Manual method
 
-Place the **"flat-updater"** script in the /usr/bin/local directory. then add the script to your cronjobs using the following commands in the terminal
+Place the **"flat-updater"** script in the /usr/bin/local directory be sure to set it to **chmod 755**. then add the script to your cronjobs using the following commands in the terminal
 
 This will open your crontab and allow you add a new job.
 
