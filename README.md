@@ -4,7 +4,7 @@
 
 ### How does it work?
 
-The Flatpak Easy Updater is designed for OpenSUSE Tumbleweed and works by utilizing the version information found in the /etc/os-release file. When set up to run at boot, it checks if any changes have occurred to this file and silently updates all your flatpaks automatically in the background. The primary purpose of this approach is to ensure that when NVIDIA drivers are updated the corresponding Flatpak version is also installed. By keeping both system drivers and Flatpak drivers synchronized, the user can enjoy a smoother flatpak experience. Say goodbye to 300mb+ manadtory flatpak driver installs just to try out one simple 50mb flatpak image. 🤧🤧🤧
+The Flatpak Easy Updater is designed for OpenSUSE Tumbleweed and works by utilizing the version information found in the /etc/os-release file. When set up to run at boot, it checks if any changes have occurred to this file and silently updates all your flatpaks automatically in the background. The primary purpose of this approach is to ensure that when NVIDIA drivers are updated the corresponding Flatpak version is also installed. By keeping both system drivers and Flatpak drivers synchronized, the user can enjoy a smoother flatpak experience. Say goodbye to 300mb+ mandatory flatpak driver installs just to try out one simple 50mb flatpak image. 🤧🤧🤧
 
 ### How do i set it up?
 
